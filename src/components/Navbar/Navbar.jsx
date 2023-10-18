@@ -1,7 +1,28 @@
 import user from "../../assets/user/user.png";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { BsCloudMoonFill, BsCloudSunFill } from "react-icons/bs";
+import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ isDark, setIsDark }) => {
+  const handleDarkMode = () => {
+    setIsDark(!isDark);
+  };
+
+  const navLinks = (
+    <>
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="/about">About</NavLink>
+      </li>
+      <li>
+        <NavLink to="/brands">Brans</NavLink>
+      </li>
+    </>
+  );
+
   return (
     <div className="max-w-7xl mx-auto">
       <div className="navbar bg-base-100">
@@ -27,63 +48,40 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li>
+              {navLinks}
             </ul>
           </div>
           <a className="btn btn-ghost normal-case text-xl">DriveWave</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li tabIndex={0}>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
-          </ul>
+          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
           <div className="flex items-center gap-4">
-            <div className="">
-              <AiOutlineShoppingCart />
+            <div onClick={handleDarkMode} className="">
+              <BsCloudMoonFill
+                className={`text-2xl ${isDark ? "block" : "hidden"}`}
+              />
+              <BsCloudSunFill
+                className={`text-2xl ${isDark ? "hidden" : "block"}`}
+              />
+            </div>
+            <div className="cursor-pointer">
+              <AiOutlineShoppingCart className="text-2xl" />
             </div>
             <div>
-              <img className="w-10 cursor-pointer" src={user} alt="" />
+              <img className="w-8 cursor-pointer" src={user} alt="" />
             </div>
           </div>
         </div>
       </div>
     </div>
   );
+};
+
+Navbar.propTypes = {
+  isDark: PropTypes.bool,
+  setIsDark: PropTypes.func,
 };
 
 export default Navbar;

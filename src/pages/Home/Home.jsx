@@ -1,10 +1,15 @@
+import { useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import Header from "./../../components/Header/Header";
+import Brands from "../../components/Brands/Brands";
 
 const Home = () => {
+  const [isDark, setIsDark] = useState(false);
+  console.log(isDark);
   return (
     <div>
-      <Header />
+      <Header isDark={isDark} setIsDark={setIsDark} />
+      <Brands />
       <Footer />
     </div>
   );
