@@ -1,12 +1,39 @@
 import { Link } from "react-router-dom";
 import signInBg from "../../assets/bg/signIn-out-bg-desktop-2.jpg";
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
+import { FcGoogle } from "react-icons/fc";
+import { updateProfile } from "firebase/auth";
 
 const SignUp = () => {
   const [isClose, setIsClose] = useState(true);
+
+  const { createUser, googleSignIn } = useContext(AuthContext);
+
   const handleClose = () => {
     setIsClose(!isClose);
+  };
+
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        if (result) {
+          Swal.fire({
+            icon: "success",
+            title: "Welcome!",
+            text: "User successfully signed up!",
+          });
+        }
+      })
+      .catch((err) => {
+        Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: err.message,
+        });
+      });
   };
 
   const handleSignUp = (e) => {
@@ -20,7 +47,55 @@ const SignUp = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    console.log(fullName, email, password);
+    if (firstName === "" || firstName === " ") {
+      Swal.fire({
+        icon: "error",
+        title: "You must provide a name!",
+      });
+      return;
+    }
+
+    if (password.length < 6) {
+      Swal.fire({
+        icon: "error",
+        title: "Password is less than 6 characters!",
+      });
+      return;
+    }
+
+    if (!/[A-Z]/.test(password)) {
+      Swal.fire({
+        icon: "error",
+        title: "Don't have a capital letter",
+      });
+      return;
+    }
+    if (!/[!#$%&? "]/.test(password)) {
+      Swal.fire({
+        icon: "error",
+        title: "Don't have a special character. Example: !, #, $, %, & or ?",
+      });
+      return;
+    }
+
+    createUser(email, password)
+      .then((result) => {
+        if (result.user) {
+          updateProfile(result.user, { displayName: fullName });
+          Swal.fire({
+            icon: "success",
+            title: "Welcome!",
+            text: "User successfully signed up!",
+          });
+        }
+      })
+      .catch((err) => {
+        Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: err.message,
+        });
+      });
   };
   return (
     <div
@@ -49,7 +124,6 @@ const SignUp = () => {
                   placeholder="First Name *"
                   name="firstName"
                   className="input input-bordered bg-transparent border-gray-200 focus:shadow-sm  focus:shadow-sky-200 focus:border-sky-300 rounded-sm md:text-lg text-base text-gray-400"
-                  required
                 />
               </div>
 
@@ -64,7 +138,6 @@ const SignUp = () => {
                   placeholder="Last Name"
                   name="lastName"
                   className="input input-bordered bg-transparent border-gray-200 focus:shadow-sm  focus:shadow-sky-200 focus:border-sky-300 rounded-sm md:text-lg text-base text-gray-400"
-                  required
                 />
               </div>
 
@@ -122,6 +195,15 @@ const SignUp = () => {
                     Sign in
                   </Link>
                 </p>
+              </div>
+              <div
+                onClick={handleGoogleSignIn}
+                className="flex items-center border border-gray-300 hover:border-sky-300 p-4 md:px-6 rounded-md cursor-pointer mt-5"
+              >
+                <FcGoogle className="text-xl" />
+                <h2 className="mx-auto text-sm md:text-xl font-semibold text-[#333]">
+                  Continue with google
+                </h2>
               </div>
             </form>
           </div>
