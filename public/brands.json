@@ -1,26 +1,92 @@
 [
   {
     "brand_name": "Toyota",
-    "img": "https://i.ibb.co/nzQtnCM/toyota.jpg"
+    "img": "https://i.ibb.co/nzQtnCM/toyota.jpg",
+    "advertisements": [
+      {
+        "message": "Unleash the Road Warrior in You! Toyota's legendary vehicles are engineered to empower your journey, ensuring reliability, style, and performance. Join the ranks of Toyota enthusiasts who appreciate the perfect blend of innovation and tradition."
+      },
+      {
+        "message": "Experience Unmatched Reliability. Toyota has set the standard for dependable vehicles for decades. When you choose Toyota, you choose peace of mind on the road."
+      },
+      {
+        "message": "Innovative Driving, Timeless Quality. From cutting-edge technology to timeless craftsmanship, Toyota is committed to excellence in every detail. Explore a world of innovation with Toyota."
+      }
+    ]
   },
   {
     "brand_name": "Ford",
-    "img": "https://i.ibb.co/p1w3FCr/ford.jpg"
+    "img": "https://i.ibb.co/p1w3FCr/ford.jpg",
+    "advertisements": [
+      {
+        "message": "Power and Performance Redefined. Ford vehicles are built to dominate the road. Get behind the wheel and feel the thrill of unmatched power and performance."
+      },
+      {
+        "message": "Adventure Awaits – Get Behind the Wheel! Ford invites you to explore new horizons and embark on unforgettable adventures. Wherever you go, Ford goes with you."
+      },
+      {
+        "message": "Discover the Art of Toughness. Ford is synonymous with toughness. Whether you're on the job site or off the beaten path, Ford is your rugged and reliable companion."
+      }
+    ]
   },
   {
     "brand_name": "BMW",
-    "img": "https://i.ibb.co/cXh2twM/bmw.jpg"
+    "img": "https://i.ibb.co/cXh2twM/bmw.jpg",
+    "advertisements": [
+      {
+        "message": "Ultimate Driving Experience Awaits. BMW is where performance meets luxury. Experience the thrill of the ultimate driving machine and redefine your journey."
+      },
+      {
+        "message": "Luxury Redefined in Every Detail. BMW's commitment to perfection is evident in every aspect of their vehicles. From the design to the engineering, it's luxury redefined."
+      },
+      {
+        "message": "Precision Engineering at its Best. BMW's precision engineering is second to none. It's not just a vehicle; it's a masterpiece of engineering and design."
+      }
+    ]
   },
   {
     "brand_name": "Mercedes-Benz",
-    "img": "https://i.ibb.co/HPJT1bt/Mercedes-Benz.jpg"
+    "img": "https://i.ibb.co/HPJT1bt/Mercedes-Benz.jpg",
+    "advertisements": [
+      {
+        "message": "Elegance and Performance Combined. Mercedes-Benz offers a blend of elegance and exceptional performance. It's the embodiment of automotive luxury."
+      },
+      {
+        "message": "A Legacy of Excellence on the Road. Mercedes-Benz has a storied history of excellence, and this tradition continues with their exceptional lineup of vehicles."
+      },
+      {
+        "message": "Luxury Meets Innovation. Mercedes-Benz brings together luxury and cutting-edge innovation, ensuring you drive in unparalleled style and comfort."
+      }
+    ]
   },
   {
     "brand_name": "Tesla",
-    "img": "https://i.ibb.co/0J9fmJ0/Tesla.jpg"
+    "img": "https://i.ibb.co/0J9fmJ0/Tesla.jpg",
+    "advertisements": [
+      {
+        "message": "Driving the Future, Today. Tesla is at the forefront of electric vehicle innovation, offering you a chance to drive the future today."
+      },
+      {
+        "message": "Clean Energy, Unmatched Performance. Tesla vehicles are powered by clean energy, delivering exceptional performance while reducing your carbon footprint."
+      },
+      {
+        "message": "Experience the Tesla Revolution. Join the electric revolution with Tesla. It's not just a vehicle; it's a movement."
+      }
+    ]
   },
   {
     "brand_name": "Honda",
-    "img": "https://i.ibb.co/v4DLVKz/honda.jpg"
+    "img": "https://i.ibb.co/v4DLVKz/honda.jpg",
+    "advertisements": [
+      {
+        "message": "Dependability and Innovation for All. Honda's commitment to innovation and reliability is why millions trust them. Discover a world of dependability and cutting-edge technology."
+      },
+      {
+        "message": "Every Journey Begins with Honda. Start your journeys with Honda, where every drive is an experience. Reliability and performance meet in perfect harmony."
+      },
+      {
+        "message": "Efficiency Meets Performance in Honda. Honda vehicles deliver efficiency without compromising on performance. Experience the best of both worlds with Honda."
+      }
+    ]
   }
 ]

@@ -7,7 +7,7 @@ const Banner = () => {
         backgroundImage: `url(${bannerBg})`,
       }}
     >
-      <div className="bg-slate-800 w-full md:max-w-lg mx-auto p-6 rounded-none md:rounded-lg bg-opacity-80 shadow-lg  shadow-slate-800 my-10">
+      <div className="bg-slate-800 w-full h-full md:h-auto md:max-w-lg mx-auto p-6 rounded-none md:rounded-lg bg-opacity-80 shadow-none md:shadow-lg  md:shadow-slate-800 my-0 md:my-10">
         <h1 className=" text-xl md:text-4xl font-bold text-slate-300">
           Welcome to DriveWave, <br /> Your Ultimate Destination <br /> for
           Automotive Excellence!

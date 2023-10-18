@@ -3,8 +3,11 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BsCloudMoonFill, BsCloudSunFill } from "react-icons/bs";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
+import useTheme from "../../customHook/useTheme/useTheme";
 
 const Navbar = ({ isDark, setIsDark }) => {
+  const { toggleTheme } = useTheme();
+
   const handleDarkMode = () => {
     setIsDark(!isDark);
   };
@@ -58,7 +61,13 @@ const Navbar = ({ isDark, setIsDark }) => {
         </div>
         <div className="navbar-end">
           <div className="flex items-center gap-4">
-            <div onClick={handleDarkMode} className="">
+            <div
+              onClick={() => {
+                handleDarkMode();
+                toggleTheme();
+              }}
+              className=""
+            >
               <BsCloudMoonFill
                 className={`text-2xl ${isDark ? "block" : "hidden"}`}
               />
