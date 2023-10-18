@@ -9,7 +9,16 @@ const SignIn = () => {
   const handleClose = () => {
     setIsClose(!isClose);
   };
-  console.log(isClose);
+
+  const handleSignIn = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    console.log(email, password);
+  };
+
   return (
     <div
       className="min-h-screen bg-cover bg-no-repeat bg-center bg-fixed"
@@ -18,14 +27,14 @@ const SignIn = () => {
       }}
     >
       <div className="min-h-screen grid place-items-center">
-        <div className="md:max-w-2xl w-full h-screen md:h-auto mx-auto bg-white ">
+        <div className="md:max-w-2xl w-full h-screen md:h-auto mx-auto bg-white my-6">
           <div className="h-12 bg-black"></div>
           <h2 className="text-3xl text-black text-center pt-8">Sign in</h2>
           <p className="text-center text-slate-700 pt-2">
             Please enter your email and password
           </p>
           <div className="">
-            <form className="card-body">
+            <form onSubmit={handleSignIn} className="card-body bg-white">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text text-lg text-gray-500">
@@ -35,7 +44,7 @@ const SignIn = () => {
                 <input
                   type="email"
                   placeholder="E-mail Address"
-                  name="password"
+                  name="email"
                   className="input input-bordered bg-transparent border-gray-200 focus:shadow-sm  focus:shadow-sky-200 focus:border-sky-300 rounded-sm md:text-lg text-base text-gray-400"
                   required
                 />
@@ -43,7 +52,7 @@ const SignIn = () => {
               <div className="form-control">
                 <label className="label">
                   <span className="label-text text-lg text-gray-500">
-                    Email
+                    Password
                   </span>
                 </label>
                 <div className="relative">
@@ -80,12 +89,12 @@ const SignIn = () => {
                   Sign in
                 </button>
                 <p className="text-black text-right pt-3">
-                  Don{`'`} have a account yet?{" "}
+                  Don{`'`} have an account yet?{" "}
                   <Link
                     to="/signUp"
-                    className="text-base text-blue-400 hover:text-blue-500 "
+                    className="text-base text-blue-400 hover:text-blue-500 font-semibold"
                   >
-                    Register
+                    Sign up
                   </Link>
                 </p>
               </div>
