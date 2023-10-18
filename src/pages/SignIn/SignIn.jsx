@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 import signInBg from "../../assets/bg/signIn-out-bg-desktop-2.jpg";
+import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
+import { useState } from "react";
+
 const SignIn = () => {
+  const [isClose, setIsClose] = useState(true);
+
+  const handleClose = () => {
+    setIsClose(!isClose);
+  };
+  console.log(isClose);
   return (
     <div
       className="min-h-screen bg-cover bg-no-repeat bg-center bg-fixed"
@@ -11,8 +20,8 @@ const SignIn = () => {
       <div className="min-h-screen grid place-items-center">
         <div className="md:max-w-2xl w-full h-screen md:h-auto mx-auto bg-white ">
           <div className="h-12 bg-black"></div>
-          <h2 className="text-3xl text-black text-center pt-6">Sign in</h2>
-          <p className="text-center text-black">
+          <h2 className="text-3xl text-black text-center pt-8">Sign in</h2>
+          <p className="text-center text-slate-700 pt-2">
             Please enter your email and password
           </p>
           <div className="">
@@ -37,13 +46,26 @@ const SignIn = () => {
                     Email
                   </span>
                 </label>
-                <input
-                  type="password"
-                  placeholder="Password"
-                  className="input input-bordered bg-transparent border-gray-200 focus:shadow-sm  focus:shadow-sky-200 focus:border-sky-300 rounded-sm md:text-lg text-base text-gray-400"
-                  name="password"
-                  required
-                />
+                <div className="relative">
+                  <input
+                    type={`${isClose ? "password" : "text"}`}
+                    placeholder="Password"
+                    className="input w-full input-bordered bg-transparent border-gray-200 focus:shadow-sm  focus:shadow-sky-200 focus:border-sky-300 rounded-sm md:text-lg text-base text-gray-400"
+                    name="password"
+                    required
+                  />
+                  <div
+                    onClick={handleClose}
+                    className="absolute right-2 top-4 cursor-pointer"
+                  >
+                    <BsEyeFill
+                      className={`text-xl ${isClose ? "hidden" : "block"}`}
+                    />
+                    <BsEyeSlashFill
+                      className={`text-xl ${isClose ? "block" : "hidden"}`}
+                    />
+                  </div>
+                </div>
                 <label className="pt-2">
                   <a
                     href="#"
