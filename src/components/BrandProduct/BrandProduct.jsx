@@ -4,7 +4,6 @@ import { AiOutlineRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const BrandProduct = ({ product }) => {
-  console.log(product._id);
   return (
     <div className=" rounded-lg overflow-hidden">
       <div className="md:grid grid-cols-5 block h-full">
@@ -41,14 +40,16 @@ const BrandProduct = ({ product }) => {
                 </span>
               </button>
             </Link>
-            <button className="relative flex gap-2 items-center justify-center py-2 w-[120px] rounded-[30px] text-white font-semibold group">
-              <span className="group-hover:-translate-x-2 left-2 transition-transform">
-                Update
-              </span>
-              <span className="group-hover:opacity-100 opacity-0 duration-300 transition-opacity absolute right-4 top-[22px] transform -translate-y-1/2">
-                <AiOutlineRight className="text-white" />
-              </span>
-            </button>
+            <Link to={`/updateProduct/${product?._id}`}>
+              <button className="relative flex gap-2 items-center justify-center py-2 w-[120px] rounded-[30px] text-white font-semibold group">
+                <span className="group-hover:-translate-x-2 left-2 transition-transform">
+                  Update
+                </span>
+                <span className="group-hover:opacity-100 opacity-0 duration-300 transition-opacity absolute right-4 top-[22px] transform -translate-y-1/2">
+                  <AiOutlineRight className="text-white" />
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
       </div>

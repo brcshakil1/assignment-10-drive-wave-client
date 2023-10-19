@@ -1,6 +1,11 @@
+import toast from "react-hot-toast";
 import bg from "../../assets/bg/addProduct-gb.jpg";
+import { useLoaderData } from "react-router-dom";
 
 const UpdateProduct = () => {
+  const product = useLoaderData();
+  // console.log(product);
+
   const handleUpdateProduct = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -12,7 +17,7 @@ const UpdateProduct = () => {
     const shortDescription = form.shortDescription.value;
     const rating = form.rating.value;
 
-    const product = {
+    const newProduct = {
       photo,
       name,
       brandName,
@@ -21,7 +26,21 @@ const UpdateProduct = () => {
       shortDescription,
       rating,
     };
-    console.log(product);
+
+    fetch(`http://localhost:4000/products/${product._id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newProduct),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount > 0) {
+          toast.success("Successfully Updated!");
+        }
+      });
   };
   return (
     <div
@@ -51,6 +70,7 @@ const UpdateProduct = () => {
                   type="text"
                   placeholder="Photo URL *"
                   name="photo"
+                  defaultValue={product.photo}
                   className="input input-bordered bg-transparent border-gray-200 focus:shadow-sm  focus:shadow-sky-200 focus:border-sky-300 rounded-sm md:text-lg text-base text-gray-700"
                   required
                 />
@@ -63,6 +83,7 @@ const UpdateProduct = () => {
                   type="text"
                   placeholder="Name *"
                   name="name"
+                  defaultValue={product.name}
                   className="input input-bordered bg-transparent border-gray-200 focus:shadow-sm  focus:shadow-sky-200 focus:border-sky-300 rounded-sm md:text-lg text-base text-gray-700"
                   required
                 />
@@ -77,6 +98,7 @@ const UpdateProduct = () => {
                   type="text"
                   placeholder="Brand Name *"
                   name="brandName"
+                  defaultValue={product.brandName}
                   className="input input-bordered bg-transparent border-gray-200 focus:shadow-sm  focus:shadow-sky-200 focus:border-sky-300 rounded-sm md:text-lg text-base text-gray-700"
                   required
                 />
@@ -88,6 +110,7 @@ const UpdateProduct = () => {
                 <select
                   name="type"
                   id=""
+                  defaultValue={product.type}
                   className="input input-bordered bg-transparent border-gray-200 focus:shadow-sm  focus:shadow-sky-200 focus:border-sky-300 rounded-sm md:text-lg text-base text-gray-700"
                 >
                   <option value="car">Car</option>
@@ -105,6 +128,7 @@ const UpdateProduct = () => {
                   type="text"
                   placeholder="Price *"
                   name="price"
+                  defaultValue={product.price}
                   className="input input-bordered bg-transparent border-gray-200 focus:shadow-sm  focus:shadow-sky-200 focus:border-sky-300 rounded-sm md:text-lg text-base text-gray-700"
                   required
                 />
@@ -118,7 +142,9 @@ const UpdateProduct = () => {
                 <textarea
                   name="shortDescription"
                   placeholder="Short Description *"
+                  defaultValue={product.shortDescription}
                   className=" textarea w-full p-4 bg-transparent border-gray-200 rounded-sm focus:outline-none focus:shadow-sm  focus:shadow-sky-200 focus:border-sky-300 text-base text-gray-700"
+                  required
                 ></textarea>
               </div>
               <div className="form-control">
@@ -131,6 +157,7 @@ const UpdateProduct = () => {
                   type="text"
                   placeholder="Rating *"
                   name="rating"
+                  defaultValue={product.rating}
                   className="input input-bordered bg-transparent border-gray-200 focus:shadow-sm  focus:shadow-sky-200 focus:border-sky-300 rounded-sm md:text-lg text-base text-gray-700"
                   required
                 />
