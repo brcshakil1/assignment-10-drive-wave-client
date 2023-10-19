@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import bg from "../../assets/bg/addProduct-gb.jpg";
 
 const AddProduct = () => {
@@ -21,7 +22,24 @@ const AddProduct = () => {
       shortDescription,
       rating,
     };
-    console.log(product);
+
+    fetch("http://localhost:4000/allProducts", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(product),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            icon: "success",
+            title: "Welcome",
+            text: "You've successfully added a product!",
+          });
+          form.reset();
+        }
+      });
   };
   return (
     <div
@@ -90,7 +108,8 @@ const AddProduct = () => {
                 >
                   <option value="car">Car</option>
                   <option value="jeep">Jeep</option>
-                  <option value="motorcycle">Motorcycle</option>
+                  <option value="SUV">SUV</option>
+                  <option value="truck">Truck</option>
                 </select>
               </div>
               <div className="form-control">

@@ -5,7 +5,7 @@ import Brands from "../../components/Brands/Brands";
 
 const Home = () => {
   const [isDark, setIsDark] = useState(false);
-  console.log(isDark);
+
   return (
     <div>
       <Header isDark={isDark} setIsDark={setIsDark} />

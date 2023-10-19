@@ -18,10 +18,10 @@ const Navbar = ({ isDark, setIsDark }) => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/about">About</NavLink>
+        <NavLink to="/addProduct">Add Product</NavLink>
       </li>
       <li>
-        <NavLink to="/brands">Brans</NavLink>
+        <NavLink to="/myCart">My Cart</NavLink>
       </li>
     </>
   );
