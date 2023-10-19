@@ -8,6 +8,7 @@ import UpdateProduct from "../pages/UpdateProduct/UpdateProduct";
 import MyCart from "./../pages/MyCart/MyCart";
 import BrandProducts from "../pages/BrandProducts/BrandProducts";
 import ProductDetails from "../pages/ProductDetails/ProductDetails";
+import PrivetRoute from "./PrivetRoute";
 
 const Router = createBrowserRouter([
   {
@@ -20,28 +21,40 @@ const Router = createBrowserRouter([
       },
       {
         path: "/brandProducts/:name",
-        element: <BrandProducts />,
+        element: (
+          <PrivetRoute>
+            <BrandProducts />
+          </PrivetRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:4000/allProducts/${params.name}`),
       },
       {
         path: "/addProduct",
-        element: <AddProduct />,
+        element: (
+          <PrivetRoute>
+            <AddProduct />
+          </PrivetRoute>
+        ),
       },
       {
         path: `/productDetails/:id`,
-        element: <ProductDetails />,
+        element: (
+          <PrivetRoute>
+            <ProductDetails />
+          </PrivetRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:4000/products/${params.id}`),
       },
       {
         path: `/myCart`,
-        element: <MyCart />,
+        element: (
+          <PrivetRoute>
+            <MyCart />
+          </PrivetRoute>
+        ),
         loader: () => fetch("http://localhost:4000/cart"),
-      },
-      {
-        path: "/myCart",
-        element: <MyCart />,
       },
       {
         path: "/signIn",
@@ -57,7 +70,11 @@ const Router = createBrowserRouter([
       },
       {
         path: "/updateProduct/:id",
-        element: <UpdateProduct />,
+        element: (
+          <PrivetRoute>
+            <UpdateProduct />
+          </PrivetRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:4000/products/${params.id}`),
       },
