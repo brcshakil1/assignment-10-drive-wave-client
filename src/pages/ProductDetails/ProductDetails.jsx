@@ -2,11 +2,27 @@ import { useLoaderData } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import { FiDollarSign } from "react-icons/fi";
 import { BsFillCartPlusFill } from "react-icons/bs";
+import toast from "react-hot-toast";
 
 const ProductDetails = () => {
   const product = useLoaderData();
   console.log(product);
   const { photo, name, brandName, type, price, shortDescription } = product;
+
+  const handleCart = () => {
+    fetch("http://localhost:4000/cart", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(product),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          toast.success("Added to cart");
+        }
+      });
+  };
   return (
     <div>
       <Navbar />
@@ -26,7 +42,10 @@ const ProductDetails = () => {
               <FiDollarSign className="text-2xl pl-1" /> {price}
             </span>
           </p>
-          <button className="relative flex gap-2 items-center justify-center py-2 w-[150px] rounded-[30px] bg-white text-[#794E41] font-semibold group">
+          <button
+            onClick={handleCart}
+            className="relative flex gap-2 items-center justify-center py-2 w-[150px] rounded-[30px] bg-white text-[#794E41] font-semibold group"
+          >
             <span className="group-hover:-translate-x-2 left-2 transition-transform">
               Add to cart
             </span>
