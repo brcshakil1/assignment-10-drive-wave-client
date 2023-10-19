@@ -4,7 +4,7 @@ import { AiOutlineRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const BrandProduct = ({ product }) => {
-  console.log(product);
+  console.log(product._id);
   return (
     <div className=" rounded-lg overflow-hidden">
       <div className="md:grid grid-cols-5 block h-full">
@@ -22,14 +22,16 @@ const BrandProduct = ({ product }) => {
               Brand: {product?.brandName}
             </h3>
             <p className="text-sm font-bold">Type: {product?.type}</p>
-            <p className="text-lg py-1">- {product?.shortDescription}</p>
+            <p className="text-lg py-1">
+              - {product?.shortDescription.slice(0, 35)}...
+            </p>
             <p className="text-lg">Rating: {product?.rating}</p>
             <span className="flex items-center text-2xl py-2 w-min">
               <FiDollarSign className="text-2xl pl-1" /> {product?.price}
             </span>
           </div>
           <div className="flex justify-between pt-2">
-            <Link to={`/productDetails`}>
+            <Link to={`/productDetails/${product?._id}`}>
               <button className="relative flex gap-2 items-center justify-center py-2 w-[120px] rounded-[30px] bg-white text-[#363949] font-semibold group">
                 <span className="group-hover:-translate-x-2 left-2 transition-transform">
                   Explore

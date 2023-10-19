@@ -7,6 +7,7 @@ const BrandProducts = () => {
   const [brandProducts, setBrandProducts] = useState([]);
 
   const { name } = useParams();
+  console.log(name);
 
   useEffect(() => {
     fetch("http://localhost:4000/allProducts")
@@ -24,7 +25,7 @@ const BrandProducts = () => {
   return (
     <div className="max-w-7xl mx-auto p-4">
       <h2>Products</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         {brandProducts.map((product) => (
           <BrandProduct key={product._id} product={product} />
         ))}
