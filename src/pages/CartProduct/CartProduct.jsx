@@ -2,7 +2,7 @@ import { PropTypes } from "prop-types";
 import { FiDollarSign } from "react-icons/fi";
 import Swal from "sweetalert2";
 
-const CartProduct = ({ cart, cartProducts, setCartProducts }) => {
+const CartProduct = ({ cart, userCartProducts, setUserCartProducts }) => {
   const handleDelete = (id) => {
     console.log("deleted", id);
     Swal.fire({
@@ -22,14 +22,13 @@ const CartProduct = ({ cart, cartProducts, setCartProducts }) => {
           .then((data) => {
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "Your file has been deleted.", "success");
-              const remaining = cartProducts.filter((pd) => pd._id !== id);
-              setCartProducts(remaining);
+              const remaining = userCartProducts.filter((pd) => pd._id !== id);
+              setUserCartProducts(remaining);
             }
           });
       }
     });
   };
-
   return (
     <div className="text-white pb-8 ">
       <div className="block md:flex shadow-md shadow-[#59696d]">
@@ -67,8 +66,8 @@ const CartProduct = ({ cart, cartProducts, setCartProducts }) => {
 
 CartProduct.propTypes = {
   cart: PropTypes.object,
-  cartProducts: PropTypes.array,
-  setCartProducts: PropTypes.func,
+  userCartProducts: PropTypes.array,
+  setUserCartProducts: PropTypes.func,
 };
 
 export default CartProduct;

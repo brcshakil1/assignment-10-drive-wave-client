@@ -55,7 +55,6 @@ const Navbar = () => {
     const localTheme = localStorage.getItem("theme");
     document.querySelector("html").setAttribute("data-theme", localTheme);
   }, [theme]);
-  console.log(user);
   return (
     <div className=" bg-base-100">
       <div className="navbar bg-base-100 max-w-7xl mx-auto p-0">

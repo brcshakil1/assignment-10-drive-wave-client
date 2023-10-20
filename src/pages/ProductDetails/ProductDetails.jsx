@@ -3,17 +3,29 @@ import Navbar from "../../components/Navbar/Navbar";
 import { FiDollarSign } from "react-icons/fi";
 import { BsFillCartPlusFill } from "react-icons/bs";
 import toast from "react-hot-toast";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
 
 const ProductDetails = () => {
   const product = useLoaderData();
-  console.log(product);
+  const { user } = useContext(AuthContext);
+
   const { photo, name, brandName, type, price, shortDescription } = product;
 
   const handleCart = () => {
+    const userCart = {
+      photo: product.photo,
+      name: product.name,
+      brandName: product.brandName,
+      type: product.type,
+      price: product.price,
+      shortDescription: product.shortDescription,
+      userEmail: user.email,
+    };
     fetch("http://localhost:4000/cart", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify(product),
+      body: JSON.stringify(userCart),
     })
       .then((res) => res.json())
       .then((data) => {
