@@ -40,12 +40,12 @@ const ProductDetails = () => {
       <Navbar />
       <div className="w-full h-[30px] bg-black" />
       <div className="max-w-7xl mx-auto grid grid-cols-1 text-white">
-        <div className="">
-          <img className="" src={photo} alt="" />
+        <div className="w-full">
+          <img className="w-full" src={photo} alt="" />
         </div>
         <div className="bg-[#794E41] p-4 md:p-5">
           <p className="text-xl font-bold ">{brandName}</p>
-          <p className="text-sm underline py-2">Type: {type}</p>
+          <p className="text-sm py-2 hover:underline inline">Type: {type}</p>
           <h2 className="text-3xl font-bold text-white pb-3">{name}</h2>
 
           <p className="">- {shortDescription}</p>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const BrandProduct = ({ product }) => {
   return (
-    <div className=" rounded-lg overflow-hidden">
+    <div className=" rounded-lg overflow-hidden mb-5">
       <div className="md:grid grid-cols-5 block h-full">
         <div className="  w-full md:col-span-3">
           <img

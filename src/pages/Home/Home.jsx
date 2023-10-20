@@ -9,7 +9,9 @@ const Home = () => {
       <Header />
       <Brands />
       <Testimonials />
-      <Footer />
+      <div className="bg-slate-700">
+        <Footer />
+      </div>
     </div>
   );
 };

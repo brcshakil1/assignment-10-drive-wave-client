@@ -7,14 +7,18 @@ const Brand = ({ brand }) => {
 
   return (
     <Link to={`/brandProducts/${brand_name}`}>
-      <div className="group rounded-lg overflow-hidden relative cursor-pointer">
-        <div className="md:h-[350px]">
-          <img className=" h-full object-cover" src={img} alt={brand_name} />
+      <div className="group rounded-lg overflow-hidden relative cursor-pointer shadow-md shadow-slate-600">
+        <div className="grid place-items-center h-[150px] md:h-[300px] bg-slate-700">
+          <img
+            className="w-[100px] md:w-[200px] object-cover"
+            src={img}
+            alt={brand_name}
+          />
         </div>
         <div className="grid place-items-center w-full h-full absolute transition-bg duration-500 ease-in-out group-hover:bg-[#000000b3] top-0 left-0">
           <BsSearch className="hidden group-hover:block text-3xl font-bold text-slate-400" />
         </div>
-        <h3 className="text-2xl md:text-3xl font-bold text-slate-300 bg-slate-800 p-3 ">
+        <h3 className="text-base md:text-3xl font-bold text-slate-300 bg-slate-800 p-3 ">
           {brand_name}
         </h3>
       </div>

@@ -73,8 +73,11 @@ const BrandsSlider = ({ name }) => {
           </div>
         </div>
       </div>
-      <div className="  absolute top-[50%] left-[50%] -translate-y-[50%] rounded-md -translate-x-[50%] text-base md:text-xl text-slate-200 font-bold h-[70%]  md:h-auto w-[75%] md:w-[500px]">
+      <div className="hidden md:block absolute top-[50%] left-[50%] -translate-y-[50%] rounded-md -translate-x-[50%] text-base md:text-xl text-slate-200 font-bold h-[70%]  md:h-auto w-[75%] md:w-[500px]">
         <p>{brandAd[0]?.ad[index]?.message}</p>
+      </div>
+      <div className="block md:hidden absolute top-[50%] left-[50%] -translate-y-[50%] rounded-md -translate-x-[50%] text-base md:text-xl text-slate-200 font-bold h-[70%]  md:h-auto w-[75%] md:w-[500px]">
+        <p>{brandAd[0]?.ad[index]?.message.slice(0, 150)}</p>
       </div>
     </div>
   );

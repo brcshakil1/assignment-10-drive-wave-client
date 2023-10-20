@@ -1,7 +1,7 @@
 [
   {
     "brand_name": "Toyota",
-    "img": "https://i.ibb.co/nzQtnCM/toyota.jpg",
+    "img": "https://i.ibb.co/8gr30kx/toyota-7.png",
     "ad": [
       {
         "message": "Unleash the Road Warrior in You! Toyota's legendary vehicles are engineered to empower your journey, ensuring reliability, style, and performance. Join the ranks of Toyota enthusiasts who appreciate the perfect blend of innovation and tradition.",
@@ -19,7 +19,7 @@
   },
   {
     "brand_name": "Ford",
-    "img": "https://i.ibb.co/p1w3FCr/ford.jpg",
+    "img": "https://i.ibb.co/Mhrbn02/ford-8.png",
     "ad": [
       {
         "message": "Power and Performance Redefined. Ford vehicles are built to dominate the road. Get behind the wheel and feel the thrill of unmatched power and performance.",
@@ -37,7 +37,7 @@
   },
   {
     "brand_name": "BMW",
-    "img": "https://i.ibb.co/cXh2twM/bmw.jpg",
+    "img": "https://i.ibb.co/vDvD9Mv/bmw.png",
     "ad": [
       {
         "message": "Ultimate Driving Experience Awaits. BMW is where performance meets luxury. Experience the thrill of the ultimate driving machine and redefine your journey.",
@@ -55,7 +55,7 @@
   },
   {
     "brand_name": "Mercedes-Benz",
-    "img": "https://i.ibb.co/HPJT1bt/Mercedes-Benz.jpg",
+    "img": "https://i.ibb.co/BGYhGD5/mercedes-benz-9.png",
     "ad": [
       {
         "message": "Elegance and Performance Combined. Mercedes-Benz offers a blend of elegance and exceptional performance. It's the embodiment of automotive luxury.",
@@ -73,7 +73,7 @@
   },
   {
     "brand_name": "Tesla",
-    "img": "https://i.ibb.co/0J9fmJ0/Tesla.jpg",
+    "img": "https://i.ibb.co/db66cXS/tesla-9.png",
     "ad": [
       {
         "message": "Driving the Future, Today. Tesla is at the forefront of electric vehicle innovation, offering you a chance to drive the future today.",
@@ -91,7 +91,7 @@
   },
   {
     "brand_name": "Honda",
-    "img": "https://i.ibb.co/v4DLVKz/honda.jpg",
+    "img": "https://i.ibb.co/MpPpTFw/honda-automobiels-1.png",
     "ad": [
       {
         "message": "Dependability and Innovation for All. Honda's commitment to innovation and reliability is why millions trust them. Discover a world of dependability and cutting-edge technology.",
