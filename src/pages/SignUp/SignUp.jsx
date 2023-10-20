@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import signInBg from "../../assets/bg/signIn-out-bg-desktop-2.jpg";
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import { useContext, useState } from "react";
@@ -6,11 +6,16 @@ import { AuthContext } from "../../providers/AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { FcGoogle } from "react-icons/fc";
 import { updateProfile } from "firebase/auth";
+import Navbar from "./../../components/Navbar/Navbar";
+import BrandsFooter from "../../components/BrandsFooter/BrandsFooter";
 
 const SignUp = () => {
   const [isClose, setIsClose] = useState(true);
 
   const { createUser, googleSignIn } = useContext(AuthContext);
+
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleClose = () => {
     setIsClose(!isClose);
@@ -25,6 +30,7 @@ const SignUp = () => {
             title: "Welcome!",
             text: "User successfully signed up!",
           });
+          navigate(location?.state ? location.state : "/");
         }
       })
       .catch((err) => {
@@ -87,6 +93,7 @@ const SignUp = () => {
             title: "Welcome!",
             text: "User successfully signed up!",
           });
+          navigate(location?.state ? location.state : "/");
         }
       })
       .catch((err) => {
@@ -104,6 +111,7 @@ const SignUp = () => {
         backgroundImage: `url(${signInBg})`,
       }}
     >
+      <Navbar />
       <div className="min-h-screen grid place-items-center">
         <div className="md:max-w-2xl w-full h-screen md:h-auto mx-auto bg-white">
           <div className="h-12 bg-black"></div>
@@ -210,16 +218,7 @@ const SignUp = () => {
           <div className="h-12 bg-black hidden md:block"></div>
         </div>
       </div>
-      <div className="bg-black hidden md:block mt-6">
-        <div className="py-14 px-6 max-w-6xl mx-auto text-6xl flex flex-wrap items-center justify-center gap-10">
-          <h2>Toyota</h2>
-          <h2>Ford</h2>
-          <h2>BMW</h2>
-          <h2>Mercedes-Benz</h2>
-          <h2>Tesla</h2>
-          <h2>Honda</h2>
-        </div>
-      </div>
+      <BrandsFooter />
     </div>
   );
 };

@@ -115,7 +115,8 @@ const UpdateProduct = () => {
                 >
                   <option value="car">Car</option>
                   <option value="jeep">Jeep</option>
-                  <option value="motorcycle">Motorcycle</option>
+                  <option value="SUV">SUV</option>
+                  <option value="truck">Truck</option>
                 </select>
               </div>
               <div className="form-control">
