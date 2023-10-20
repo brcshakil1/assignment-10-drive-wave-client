@@ -29,7 +29,7 @@ const BrandProducts = () => {
       {brandProducts.length ? (
         <div className="py-10">
           <BrandsSlider name={name} />
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 py-10">
             {brandProducts.map((product) => (
               <BrandProduct key={product._id} product={product} />
             ))}
