@@ -33,12 +33,6 @@ const Navbar = () => {
       <li>
         <NavLink to="/myCart">My Cart</NavLink>
       </li>
-      {/* <li
-        className="md:hidden block cursor-pointer pl-3 py-1 hover:text-white"
-        onClick={handleLogout}
-      >
-        Sign out
-      </li> */}
     </>
   );
 

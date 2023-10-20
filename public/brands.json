@@ -2,97 +2,97 @@
   {
     "brand_name": "Toyota",
     "img": "https://i.ibb.co/nzQtnCM/toyota.jpg",
-    "advertisements": [
+    "ad": [
       {
         "message": "Unleash the Road Warrior in You! Toyota's legendary vehicles are engineered to empower your journey, ensuring reliability, style, and performance. Join the ranks of Toyota enthusiasts who appreciate the perfect blend of innovation and tradition.",
-        "img": ""
+        "img": "https://i.ibb.co/wMHvL67/toyota-advertise-1.jpg"
       },
       {
         "message": "Experience Unmatched Reliability. Toyota has set the standard for dependable vehicles for decades. When you choose Toyota, you choose peace of mind on the road.",
-        "img": ""
+        "img": "https://i.ibb.co/kS4pSsq/toyota-advertise-2.jpg"
       },
       {
         "message": "Innovative Driving, Timeless Quality. From cutting-edge technology to timeless craftsmanship, Toyota is committed to excellence in every detail. Explore a world of innovation with Toyota.",
-        "img": ""
+        "img": "https://i.ibb.co/3cpkKzX/toyota-advertise-3.jpg"
       }
     ]
   },
   {
     "brand_name": "Ford",
     "img": "https://i.ibb.co/p1w3FCr/ford.jpg",
-    "advertisements": [
+    "ad": [
       {
         "message": "Power and Performance Redefined. Ford vehicles are built to dominate the road. Get behind the wheel and feel the thrill of unmatched power and performance.",
-        "img": ""
+        "img": "https://i.ibb.co/2ZxN75P/ford-ad-1.jpg"
       },
       {
         "message": "Adventure Awaits – Get Behind the Wheel! Ford invites you to explore new horizons and embark on unforgettable adventures. Wherever you go, Ford goes with you.",
-        "img": ""
+        "img": "https://i.ibb.co/XCM98C0/ford-ad-2.jpg"
       },
       {
         "message": "Discover the Art of Toughness. Ford is synonymous with toughness. Whether you're on the job site or off the beaten path, Ford is your rugged and reliable companion.",
-        "img": ""
+        "img": "https://i.ibb.co/C62sYhP/ford-ad-3.jpg"
       }
     ]
   },
   {
     "brand_name": "BMW",
     "img": "https://i.ibb.co/cXh2twM/bmw.jpg",
-    "advertisements": [
+    "ad": [
       {
         "message": "Ultimate Driving Experience Awaits. BMW is where performance meets luxury. Experience the thrill of the ultimate driving machine and redefine your journey.",
-        "img": ""
+        "img": "https://i.ibb.co/DKXCVfy/bmw-ad-1.jpg"
       },
       {
         "message": "Luxury Redefined in Every Detail. BMW's commitment to perfection is evident in every aspect of their vehicles. From the design to the engineering, it's luxury redefined.",
-        "img": ""
+        "img": "https://i.ibb.co/rGzD1Zb/bmw-ad-2.jpg"
       },
       {
         "message": "Precision Engineering at its Best. BMW's precision engineering is second to none. It's not just a vehicle; it's a masterpiece of engineering and design.",
-        "img": ""
+        "img": "https://i.ibb.co/6JDMTnZ/bmw-ad-3.jpg"
       }
     ]
   },
   {
     "brand_name": "Mercedes-Benz",
     "img": "https://i.ibb.co/HPJT1bt/Mercedes-Benz.jpg",
-    "advertisements": [
+    "ad": [
       {
         "message": "Elegance and Performance Combined. Mercedes-Benz offers a blend of elegance and exceptional performance. It's the embodiment of automotive luxury.",
-        "img": ""
+        "img": "https://i.ibb.co/0DKCSxg/Mercedes-Benz-ad-1.jpg"
       },
       {
         "message": "A Legacy of Excellence on the Road. Mercedes-Benz has a storied history of excellence, and this tradition continues with their exceptional lineup of vehicles.",
-        "img": ""
+        "img": "https://i.ibb.co/ChTgBjT/Mercedes-Benz-ad-2.jpg"
       },
       {
         "message": "Luxury Meets Innovation. Mercedes-Benz brings together luxury and cutting-edge innovation, ensuring you drive in unparalleled style and comfort.",
-        "img": ""
+        "img": "https://i.ibb.co/Z8zjQ8g/Mercedes-Benz-ad-3.jpg"
       }
     ]
   },
   {
     "brand_name": "Tesla",
     "img": "https://i.ibb.co/0J9fmJ0/Tesla.jpg",
-    "advertisements": [
+    "ad": [
       {
         "message": "Driving the Future, Today. Tesla is at the forefront of electric vehicle innovation, offering you a chance to drive the future today.",
-        "img": ""
+        "img": "https://i.ibb.co/Z1zKHwk/tesla-1.jpg"
       },
       {
         "message": "Clean Energy, Unmatched Performance. Tesla vehicles are powered by clean energy, delivering exceptional performance while reducing your carbon footprint.",
-        "img": ""
+        "img": "https://i.ibb.co/znDhFFy/tesla-2.jpg"
       },
       {
         "message": "Experience the Tesla Revolution. Join the electric revolution with Tesla. It's not just a vehicle; it's a movement.",
-        "img": ""
+        "img": "https://i.ibb.co/1THvPpG/tesla-3.jpg"
       }
     ]
   },
   {
     "brand_name": "Honda",
     "img": "https://i.ibb.co/v4DLVKz/honda.jpg",
-    "advertisements": [
+    "ad": [
       {
         "message": "Dependability and Innovation for All. Honda's commitment to innovation and reliability is why millions trust them. Discover a world of dependability and cutting-edge technology.",
         "img": ""

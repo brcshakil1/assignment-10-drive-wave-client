@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import BrandProduct from "./../../components/BrandProduct/BrandProduct";
 import Navbar from "../../components/Navbar/Navbar";
+import BrandsSlider from "../../components/BrandsSlider/BrandsSlider";
 
 const BrandProducts = () => {
   const [allBrandsProducts, setAllBrandsProducts] = useState([]);
   const [brandProducts, setBrandProducts] = useState([]);
 
   const { name } = useParams();
-  console.log(name);
 
   useEffect(() => {
     fetch("http://localhost:4000/allProducts")
@@ -28,6 +28,7 @@ const BrandProducts = () => {
       <Navbar />
       {brandProducts.length ? (
         <div className="py-10">
+          <BrandsSlider name={name} />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             {brandProducts.map((product) => (
               <BrandProduct key={product._id} product={product} />
