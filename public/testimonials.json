@@ -1,0 +1,30 @@
+[
+  {
+    "name": "John Doe",
+    "photo": "https://i.ibb.co/j3fb44G/member-1.jpg",
+    "location": "New York, NY",
+    "testimonial": "I couldn't be happier with my purchase from this dealership. The sales team was very knowledgeable and helped me find the perfect car for my needs.",
+    "rating": 5
+  },
+  {
+    "name": "Alice Smith",
+    "photo": "https://i.ibb.co/Qj7wFGF/member-10.jpg",
+    "location": "Los Angeles, CA",
+    "testimonial": "I've been a customer for years, and the service at this dealership is always top-notch. They make car buying a breeze.",
+    "rating": 4
+  },
+  {
+    "name": "Michael Johnson",
+    "photo": "https://i.ibb.co/1LG1QzW/member-3.jpg",
+    "location": "Chicago, IL",
+    "testimonial": "The car I bought here has exceeded my expectations. It's been a joy to drive, and I'd recommend this dealership to anyone.",
+    "rating": 5
+  },
+  {
+    "name": "Sara Davis",
+    "photo": "https://i.ibb.co/myx2CrP/member-11.jpg",
+    "location": "Houston, TX",
+    "testimonial": "The staff at this dealership is friendly and professional. I felt valued as a customer, and the financing options were excellent.",
+    "rating": 4
+  }
+]
