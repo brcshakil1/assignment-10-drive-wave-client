@@ -1,8 +1,18 @@
-# React + Vite
+# Project Name
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The website name is DriveWave. It's a Automotive brands product website.
 
-Currently, two official plugins are available:
+# Live Link
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+www.com
+
+## Features
+
+- Dynamic Routeing
+- Privet Routing
+- Firebase login and registration authentication
+- User need to login for check Brand details
+- User can add products
+- User can update product info
+- User can add product to the cart
+- User can remove cart products
