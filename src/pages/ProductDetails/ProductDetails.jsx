@@ -22,14 +22,13 @@ const ProductDetails = () => {
       shortDescription: product.shortDescription,
       userEmail: user.email,
     };
-    fetch("https://drive-wave-server.vercel.app/cart", {
+    fetch("https://drive-wave-server-ojtbf5xjn-brcshakil.vercel.app/cart", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(userCart),
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.insertedId) {
           toast.success("Added to cart");
         }

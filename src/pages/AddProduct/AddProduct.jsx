@@ -25,11 +25,14 @@ const AddProduct = () => {
       rating,
     };
 
-    fetch("https://drive-wave-server.vercel.app/allProducts", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(product),
-    })
+    fetch(
+      "https://drive-wave-server-ojtbf5xjn-brcshakil.vercel.app/allProducts",
+      {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(product),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

@@ -29,13 +29,16 @@ const UpdateProduct = () => {
       rating,
     };
 
-    fetch(`https://drive-wave-server.vercel.app/products/${product._id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newProduct),
-    })
+    fetch(
+      `https://drive-wave-server-ojtbf5xjn-brcshakil.vercel.app/products/${product._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newProduct),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
