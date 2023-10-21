@@ -11,14 +11,16 @@ const BuyingTips = () => {
   }, []);
   console.log(buyingTips);
   return (
-    <div className="max-w-7xl mx-auto">
-      <h2 className="text-3xl font-semibold text-center py-5">
-        Vehicles buying tips
-      </h2>
-      <div className="grid grid-cols-5 gap-3">
-        {buyingTips?.map((tips, idx) => (
-          <Tips key={idx} tips={tips} />
-        ))}
+    <div className="bg-slate-800 py-10 my-10">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl font-semibold text-center text-white">
+          Vehicles buying tips
+        </h2>
+        <div className="grid grid-cols-5 gap-3">
+          {buyingTips?.map((tips, idx) => (
+            <Tips key={idx} tips={tips} />
+          ))}
+        </div>
       </div>
     </div>
   );
