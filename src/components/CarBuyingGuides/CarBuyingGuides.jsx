@@ -9,7 +9,6 @@ const CarBuyingGuides = () => {
       .then((res) => res.json())
       .then((data) => setGuides(data));
   }, []);
-  console.log(guides);
   return (
     <div
       className="h-screen bg-[#00000046] bg-blend-overlay bg-no-repeat bg-center bg-fixed overflow-x-hidden overflow-scroll py-10 my-10"

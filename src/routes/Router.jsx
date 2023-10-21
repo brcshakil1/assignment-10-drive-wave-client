@@ -23,11 +23,7 @@ const Router = createBrowserRouter([
       },
       {
         path: "/brandProducts/:name",
-        element: (
-          <PrivetRoute>
-            <BrandProducts />
-          </PrivetRoute>
-        ),
+        element: <BrandProducts />,
         loader: ({ params }) =>
           fetch(
             `https://drive-wave-server-ojtbf5xjn-brcshakil.vercel.app/allProducts/${params.name}`
