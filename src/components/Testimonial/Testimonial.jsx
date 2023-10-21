@@ -4,11 +4,11 @@ import Rating from "react-rating";
 const Testimonial = ({ testimonial }) => {
   console.log(testimonial);
   return (
-    <div className="border rounded">
+    <div className="border rounded flex flex-col">
       <div>
         <img src={testimonial?.photo} alt="" />
       </div>
-      <div className="p-3 ">
+      <div className="p-3 flex-grow">
         <h2 className="text-xl font-bold pt-2 ">{testimonial?.name}</h2>
         <div>
           <p className="flex items-center gap-1 py-1">
@@ -17,6 +17,8 @@ const Testimonial = ({ testimonial }) => {
           </p>
         </div>
         <p className="pb-1">{testimonial?.testimonial}</p>
+      </div>
+      <div className="pl-3 pb-3">
         <p>
           <Rating
             initialRating={testimonial?.rating}

@@ -8,7 +8,6 @@ import CartProduct from "../CartProduct/CartProduct";
 const MyCart = () => {
   const loadedCartProducts = useLoaderData();
   const [userCartProducts, setUserCartProducts] = useState([]);
-  console.log(userCartProducts);
 
   const { user } = useContext(AuthContext);
 
@@ -23,14 +22,15 @@ const MyCart = () => {
     <div className="max-w-7xl mx-auto p-4">
       <Navbar />
       <div className="py-10">
-        {userCartProducts.map((cart) => (
-          <CartProduct
-            key={cart._id}
-            cart={cart}
-            userCartProducts={userCartProducts}
-            setUserCartProducts={setUserCartProducts}
-          />
-        ))}
+        {userCartProducts &&
+          userCartProducts.map((cart) => (
+            <CartProduct
+              key={cart._id}
+              cart={cart}
+              userCartProducts={userCartProducts}
+              setUserCartProducts={setUserCartProducts}
+            />
+          ))}
       </div>
     </div>
   );

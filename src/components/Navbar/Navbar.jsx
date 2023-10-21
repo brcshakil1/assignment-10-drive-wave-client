@@ -1,10 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import userImg from "../../assets/user/user.png";
-// import { AiOutlineShoppingCart } from "react-icons/ai";
-// import { BsCloudMoonFill, BsCloudSunFill } from "react-icons/bs";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./../../providers/AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
+import logo from "../../assets/logo/logo2.png";
 
 const Navbar = () => {
   const [theme, setTheme] = useState(
@@ -104,7 +103,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/">
-            <a className="btn btn-ghost normal-case text-xl">DriveWave</a>
+            <img className="w-[120px] py-4" src={logo} alt="DriveWave" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

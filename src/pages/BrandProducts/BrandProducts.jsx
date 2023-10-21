@@ -33,7 +33,7 @@ const BrandProducts = () => {
             - Explore Products -
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-            {brandProducts.map((product) => (
+            {brandProducts?.map((product) => (
               <BrandProduct key={product._id} product={product} />
             ))}
           </div>
@@ -41,15 +41,22 @@ const BrandProducts = () => {
       ) : (
         <div className=" h-[80vh] grid place-items-center">
           <div className="flex flex-col  items-center">
-            <h2 className="text-2xl font-bold">
+            <h2 className="text-2xl font-bold text-center">
               We don{`'`}t have {name}
               {`'`}s products yet.
             </h2>
-            <Link to="/">
-              <button className="border-2 border-black hover:border-slate-800 text-black hover:text-white py-2 px-4 rounded-md mt-5 hover:bg-slate-800 translate-bg duration-300 ease-in-out font-bold">
-                Go To Home
-              </button>
-            </Link>
+            <div className="flex justify-center gap-3">
+              <Link to="/addProduct">
+                <button className="border-2 border-black hover:border-slate-800 text-black hover:text-white py-2 px-4 rounded-md mt-5 hover:bg-slate-800 translate-bg duration-300 ease-in-out font-bold">
+                  Add Product
+                </button>
+              </Link>
+              <Link to="/">
+                <button className="border-2 border-black hover:border-slate-800 text-black hover:text-white py-2 px-4 rounded-md mt-5 hover:bg-slate-800 translate-bg duration-300 ease-in-out font-bold">
+                  Go To Home
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       )}

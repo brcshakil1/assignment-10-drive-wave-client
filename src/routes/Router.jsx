@@ -9,11 +9,13 @@ import MyCart from "./../pages/MyCart/MyCart";
 import BrandProducts from "../pages/BrandProducts/BrandProducts";
 import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import PrivetRoute from "./PrivetRoute";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const Router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",

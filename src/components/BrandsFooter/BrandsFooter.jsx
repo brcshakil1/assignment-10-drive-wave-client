@@ -1,6 +1,6 @@
 const BrandsFooter = () => {
   return (
-    <div className="bg-black hidden md:block">
+    <div className="bg-black hidden md:block text-white">
       <div className="py-14 px-6 max-w-6xl mx-auto text-6xl flex flex-wrap items-center justify-center gap-10">
         <h2>Toyota</h2>
         <h2>Ford</h2>

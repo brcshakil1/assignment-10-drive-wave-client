@@ -17,15 +17,14 @@ const BrandProduct = ({ product }) => {
         </div>
         <div className=" w-full md:col-span-2 bg-[#363949] text-white p-4 space-y-1 flex flex-col">
           <div className="flex-grow">
-            <h2 className="text-xl md:text-2xl font-bold">{product?.name}</h2>
+            <h2 className="text-xl md:text-2xl font-bold pb-2">
+              {product?.name}
+            </h2>
             <h3 className="text-lg font-semibold">
               Brand: {product?.brandName}
             </h3>
             <p className="text-sm font-bold">Type: {product?.type}</p>
-            <p className="text-lg py-1">
-              - {product?.shortDescription.slice(0, 35)}...
-            </p>
-            <p className="text-lg">
+            <p className="text-lg mt-2">
               <Rating
                 initialRating={product?.rating}
                 readonly
@@ -49,7 +48,7 @@ const BrandProduct = ({ product }) => {
                 }
               />{" "}
             </p>
-            <span className="flex items-center text-2xl py-2 w-min">
+            <span className="flex items-center text-2xl pb-2 w-min">
               <FiDollarSign className="text-2xl pl-1" /> {product?.price}
             </span>
           </div>

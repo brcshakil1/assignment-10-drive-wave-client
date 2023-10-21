@@ -38,7 +38,7 @@ const ProductDetails = () => {
   return (
     <div>
       <Navbar />
-      <div className="w-full h-[30px] bg-black" />
+      <div className="w-full md:max-w-7xl mx-auto h-[30px] bg-black" />
       <div className="max-w-7xl mx-auto grid grid-cols-1 text-white">
         <div className="w-full">
           <img className="w-full" src={photo} alt="" />
