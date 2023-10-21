@@ -49,6 +49,7 @@ const SignUp = () => {
     const firstName = form.firstName.value;
     const lastName = form.lastName.value;
     const fullName = firstName + " " + lastName;
+    const photo = form.photo.value;
 
     const email = form.email.value;
     const password = form.password.value;
@@ -87,7 +88,10 @@ const SignUp = () => {
     createUser(email, password)
       .then((result) => {
         if (result.user) {
-          updateProfile(result.user, { displayName: fullName });
+          updateProfile(result.user, {
+            displayName: fullName,
+            photoURL: photo || "https://i.ibb.co/7N05NdW/user.png",
+          });
           Swal.fire({
             icon: "success",
             title: "Welcome!",
@@ -132,6 +136,7 @@ const SignUp = () => {
                   placeholder="First Name *"
                   name="firstName"
                   className="input input-bordered bg-transparent border-gray-200 focus:shadow-sm  focus:shadow-sky-200 focus:border-sky-300 rounded-sm md:text-lg text-base text-gray-400"
+                  required
                 />
               </div>
 
@@ -145,6 +150,20 @@ const SignUp = () => {
                   type="text"
                   placeholder="Last Name"
                   name="lastName"
+                  className="input input-bordered bg-transparent border-gray-200 focus:shadow-sm  focus:shadow-sky-200 focus:border-sky-300 rounded-sm md:text-lg text-base text-gray-400"
+                />
+              </div>
+
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text text-lg text-gray-500">
+                    Photo URL
+                  </span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Photo URL"
+                  name="photo"
                   className="input input-bordered bg-transparent border-gray-200 focus:shadow-sm  focus:shadow-sky-200 focus:border-sky-300 rounded-sm md:text-lg text-base text-gray-400"
                 />
               </div>

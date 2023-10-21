@@ -26,7 +26,7 @@ const BrandProducts = () => {
   return (
     <div className="max-w-7xl mx-auto p-4">
       <Navbar />
-      {brandProducts.length ? (
+      {brandProducts?.length ? (
         <div className="pb-10">
           <BrandsSlider name={name} />
           <h2 className="text-xl md:text-2xl text-center font-semibold pt-12 pb-8">

@@ -2,7 +2,6 @@ import { PropTypes } from "prop-types";
 import { FaAddressBook } from "react-icons/fa";
 import Rating from "react-rating";
 const Testimonial = ({ testimonial }) => {
-  console.log(testimonial);
   return (
     <div className="border rounded flex flex-col">
       <div>
