@@ -29,7 +29,9 @@ const Router = createBrowserRouter([
           </PrivetRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/allProducts/${params.name}`),
+          fetch(
+            `https://drive-wave-server.vercel.app/allProducts/${params.name}`
+          ),
       },
       {
         path: "/addProduct",
@@ -47,7 +49,7 @@ const Router = createBrowserRouter([
           </PrivetRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/products/${params.id}`),
+          fetch(`https://drive-wave-server.vercel.app/products/${params.id}`),
       },
       {
         path: `/myCart`,
@@ -56,7 +58,7 @@ const Router = createBrowserRouter([
             <MyCart />
           </PrivetRoute>
         ),
-        loader: () => fetch("http://localhost:4000/cart"),
+        loader: () => fetch("https://drive-wave-server.vercel.app/cart"),
       },
       {
         path: "/signIn",
@@ -78,7 +80,7 @@ const Router = createBrowserRouter([
           </PrivetRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/products/${params.id}`),
+          fetch(`https://drive-wave-server.vercel.app/products/${params.id}`),
       },
     ],
   },

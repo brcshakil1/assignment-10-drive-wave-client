@@ -11,7 +11,7 @@ const BrandProducts = () => {
   const { name } = useParams();
 
   useEffect(() => {
-    fetch("http://localhost:4000/allProducts")
+    fetch("https://drive-wave-server.vercel.app/allProducts")
       .then((res) => res.json())
       .then((data) => setAllBrandsProducts(data));
   }, []);

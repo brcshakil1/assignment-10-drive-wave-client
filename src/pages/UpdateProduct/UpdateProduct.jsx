@@ -29,7 +29,7 @@ const UpdateProduct = () => {
       rating,
     };
 
-    fetch(`http://localhost:4000/products/${product._id}`, {
+    fetch(`https://drive-wave-server.vercel.app/products/${product._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

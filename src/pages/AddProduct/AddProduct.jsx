@@ -25,7 +25,7 @@ const AddProduct = () => {
       rating,
     };
 
-    fetch("http://localhost:4000/allProducts", {
+    fetch("https://drive-wave-server.vercel.app/allProducts", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(product),

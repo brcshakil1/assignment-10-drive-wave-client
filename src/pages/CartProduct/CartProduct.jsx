@@ -15,7 +15,7 @@ const CartProduct = ({ cart, userCartProducts, setUserCartProducts }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:4000/cart/${id}`, {
+        fetch(`https://drive-wave-server.vercel.app/cart/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

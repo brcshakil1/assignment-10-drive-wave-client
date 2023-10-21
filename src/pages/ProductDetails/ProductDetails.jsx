@@ -22,7 +22,7 @@ const ProductDetails = () => {
       shortDescription: product.shortDescription,
       userEmail: user.email,
     };
-    fetch("http://localhost:4000/cart", {
+    fetch("https://drive-wave-server.vercel.app/cart", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(userCart),
