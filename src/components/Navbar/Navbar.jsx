@@ -23,13 +23,13 @@ const Navbar = () => {
 
   const navLinks = (
     <>
-      <li>
+      <li className="text-xl">
         <NavLink to="/">Home</NavLink>
       </li>
-      <li>
+      <li className="text-xl">
         <NavLink to="/addProduct">Add Product</NavLink>
       </li>
-      <li>
+      <li className="text-xl">
         <NavLink to="/myCart">My Cart</NavLink>
       </li>
     </>
