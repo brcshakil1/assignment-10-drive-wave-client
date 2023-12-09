@@ -18,3 +18,8 @@ https://drive-wave-client.web.app
 - User can add product to the cart
 - User can remove cart products
 - Light Dark toggle
+
+## Technology used
+- Front-end: HTML, Tailwind, Daisy UI, JS and React.js
+- Back-end : Express.js, Node.js, and MongoDB
+- Furthermore, to fortify user security and streamline authentication processes, I have seamlessly integrated Firebase Authentication. For efficient deployment, I have utilized Firebase hosting.
